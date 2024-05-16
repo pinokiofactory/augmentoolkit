@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "1.5",
   title: "augmentoolkit",
-  description: "",
+  description: "Convert Compute And Books Into Instruct-Tuning Datasets https://github.com/e-p-armstrong/augmentoolkit",
   icon: "icon.jpeg",
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
