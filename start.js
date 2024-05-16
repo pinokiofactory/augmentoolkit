@@ -5,7 +5,9 @@ module.exports = {
       method: "shell.run",
       params: {
         venv: "env",                // Edit this to customize the venv folder path
-        env: { },                   // Edit this to customize environment variables (see documentation)
+        env: {
+          GRADIO_TEMP_DIR: "{{path.resolve(cwd, 'app/raw_txt_input')}}",
+        },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
           "python app.py",
