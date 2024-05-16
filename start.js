@@ -2,6 +2,12 @@ module.exports = {
   daemon: true,
   run: [
     {
+      method: "fs.rm",
+      params: {
+        path: "{{path.resolve(cwd, 'app/raw_txt_input')}}"
+      }
+    },
+    {
       method: "shell.run",
       params: {
         venv: "env",                // Edit this to customize the venv folder path
