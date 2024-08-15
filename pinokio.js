@@ -1,9 +1,15 @@
 const path = require('path')
 module.exports = {
-  version: "1.5",
+  version: "2.0",
   title: "augmentoolkit",
   description: "Turn any raw text into a high-quality dataset for AI finetuning https://github.com/e-p-armstrong/augmentoolkit",
   icon: "icon.jpeg",
+  pre: [{
+    icon: "ollama.png",
+    title: "Ollama",
+    description: "Get up and running with large language models.",
+    href: "https://ollama.com/"
+  }],
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
     let installed = await kernel.exists(__dirname, "app", "env")

@@ -1,23 +1,11 @@
 module.exports = {
   run: [
-    // Edit this step to customize the git repository to use
-    {
-      method: "modal",
-      params: {
-        title: "Ollama",
-        description: "Launch Ollama before proceeding.",
-        menu: [{
-          text: "Install Ollama",
-          href: "https://ollama.com/"
-        }]
-      }
-    },
     {
       method: "shell.run",
       params: {
         message: [
-          //"git clone https://github.com/e-p-armstrong/augmentool app",
-          "git clone https://github.com/peanutcocktail/augmentoolkit app",
+          "git clone https://github.com/e-p-armstrong/augmentoolkit app",
+          //"git clone https://github.com/peanutcocktail/augmentoolkit app",
           "npm install"
         ]
       }
@@ -55,11 +43,5 @@ module.exports = {
         venv: "app/env"
       }
     },
-    {
-      method: "notify",
-      params: {
-        html: "Click the 'start' tab to get started!"
-      }
-    }
   ]
 }
